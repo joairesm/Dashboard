@@ -3,8 +3,7 @@
       <div class="card-text">
         <div class="row">
             <div class="col-3">{{accountInfo.number}}</div>
-            <div class="col-2">
-                {{accountInfo.subscription.name}} <span class="info">{{accountInfo.subscription.price}}kr</span>
+            <div class="col-2">{{accountInfo.subscription.name}}<span class="info"> {{accountInfo.subscription.price}}kr</span>
             </div>
             <div class="col-4">
                 <select [disabled]="!accountInfo.active" [(ngModel)]="optionselected" 
@@ -20,22 +19,12 @@
                     [default-value]="accountInfo.active" 
                     (valueChange)="onToggleChange($event)"></togglebutton-component>
                     <span [ngSwitch]="accountInfo.active">
-                            <p *ngSwitchCase="true" class="info" >
-                                Active
-                            </p>
-                            <p *ngSwitchCase="false" class="info">
-                                Deactive
-                            </p>
-                            <p *ngSwitchDefault class="info">
-                                unknown state
-                            </p>
-                        </span>
-            
-                </div>
+                        <p *ngSwitchCase="true" class="info" i18n>Active</p>
+                        <p *ngSwitchCase="false" class="info" i18n>Deactive</p>
+                        <p *ngSwitchDefault class="info" i18n>unknown state</p>
+                    </span>
+            </div>
         </div>
-
-
       </div>
-
     </div>
 </div>

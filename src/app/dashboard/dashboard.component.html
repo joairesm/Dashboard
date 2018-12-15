@@ -1,25 +1,30 @@
-<h1>Dashboard</h1>
-<div>
-  <span [ngSwitch]="activeAccounts">
-    <p *ngSwitchCase="0">
-        No active accounts
-    </p>
-    <p *ngSwitchCase="1">
-        1 active account costing {{price}}kr
-    </p>
-    <p *ngSwitchDefault>
-        {{activeAccounts}} active accounts costing {{price}}kr
-    </p>
-  </span>
+<div class="row">
+
+  <div class="col">
+    <h1 i18n>Dashboard</h1>
+    <div>
+      <span [ngSwitch]="activeAccounts">
+        <p *ngSwitchCase="0" i18n>No active accounts</p>
+        <p *ngSwitchCase="1" i18n>1 active account costing {{price}}kr</p>
+        <p *ngSwitchDefault i18n>{{activeAccounts}} active accounts costing {{price}}kr</p>
+      </span>
+    </div>
+  </div>
+
+  <div class="col menu-bar">
+    <a class="btn btn-outline-primary" target="_blank" href="https://github.com/joairesm/challenge">GihHub</a>
+  </div>
+
 </div>
 
 <div class="input-group input-group-md">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-md">Search</span>
+      <span class="input-group-text" id="inputGroup-sizing-md" i18n>Search</span>
     </div>
     <input type="text" 
       [(ngModel)]="searchText" 
       class="form-control" 
+      i18n-placeholder
       placeholder="Try to search for a number, subscription plan or state.."
       aria-label="Sizing example input" 
       aria-describedby="inputGroup-sizing-md">

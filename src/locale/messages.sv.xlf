@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="sv" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="b36e1450940b7f6028d8587568c7d669b53f7a06" datatype="html">
+        <source>Active</source>
+        <target>Aktiva</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/accountentry/accountentry.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a049cb418468cbf753ceed9780e54493f81d5c07" datatype="html">
+        <source>Deactive</source>
+        <target>Deaktiveras</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/accountentry/accountentry.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ce71f3f598d5a1ca6e178c0b7206383a93f319e3" datatype="html">
+        <source>unknown state</source>
+        <target>okänt tillstånd</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/accountentry/accountentry.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
+        <source>Dashboard</source>
+        <target>Instrumentbräda</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="009e5ce9faacb3f29144b4b8f4c416e42be4c164" datatype="html">
+        <source>No active accounts</source>
+        <target>Inga aktiva konton</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fe058cac16e58e231979568c7f105482009971b1" datatype="html">
+        <source>1 active account costing <x id="INTERPOLATION" equiv-text="{{price}}"/>kr</source>
+        <target>1 aktivt konto kostar <x id="INTERPOLATION" equiv-text="{{price}}"/>kr</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="79ac878a34beb0f4cf5190b1b26e8d13ffc0c0ef" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{activeAccounts}}"/> active accounts costing <x id="INTERPOLATION_1" equiv-text="{{price}}"/>kr</source>
+        <target><x id="INTERPOLATION" equiv-text="{{activeAccounts}}"/> aktiva konton kostar  <x id="INTERPOLATION_1" equiv-text="{{price}}"/>kr</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7e892ba15f2c6c17e83510e273b3e10fc32ea016" datatype="html">
+        <source>Search</source>
+        <target>Sök</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="64da822c6705b042209c98c3cf0f8770ca97b9b5" datatype="html">
+        <source>Try to search for a number, subscription plan or state..</source>
+        <target>Försök att söka efter ett nummer, abonnemangsplan eller stat ..</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

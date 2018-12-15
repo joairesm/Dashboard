@@ -27,6 +27,7 @@ export class DashboardComponent {
 
         var Newdata = data;
         this.getdata(Newdata);
+
     }
 
     getdata(accounts: account[]){

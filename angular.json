@@ -56,6 +56,14 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "sv": {
+              "aot": true,
+              "outputPath": "dist/challenge-sv/",
+              "i18nFile": "src/locale/messages.sv.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "sv",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -67,6 +75,9 @@
           "configurations": {
             "production": {
               "browserTarget": "challenge:build:production"
+            },
+            "sv": {
+              "browserTarget": "challenge:build:sv"
             }
           }
         },
