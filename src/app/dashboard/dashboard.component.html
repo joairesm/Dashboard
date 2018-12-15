@@ -17,9 +17,14 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-md">Search</span>
     </div>
-    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-md">
+    <input type="text" 
+      [(ngModel)]="searchText" 
+      class="form-control" 
+      placeholder="Try to search for a number, subscription plan or state.."
+      aria-label="Sizing example input" 
+      aria-describedby="inputGroup-sizing-md">
 </div>
 
-<div *ngFor="let item of accounts">
+<div *ngFor="let item of accounts | filterpipe : searchText">
   <app-accountentry [account]="item" ></app-accountentry>
 </div>

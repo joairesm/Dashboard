@@ -39,12 +39,8 @@ function updateService(state, action){
 }
 
 function changeSubscription(state, action) {
-
-    //console.log(action.subscription.name);
-
     var newlist = state.accounts;
     var account = newlist.find( a => a == action.account)
     account.subscription = action.subscription;
-
     return tassign(state, {accounts: newlist});
 }

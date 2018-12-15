@@ -15,6 +15,7 @@ export class DashboardComponent {
     accounts: account[];
     activeAccounts: number;
     price: number;
+    searchText:string;
 
     constructor(private redux: NgRedux<IAppState>){
         var sub = redux.subscribe( () => {

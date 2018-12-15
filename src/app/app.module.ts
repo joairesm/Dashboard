@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { AccountEntryComponent } from './accountentry/accountentry.component';
 import { ToggleButtonComponent } from './togglebutton/togglebutton.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountEntryComponent,
     ToggleButtonComponent,
-    DashboardComponent
+    DashboardComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
