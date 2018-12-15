@@ -1,4 +1,17 @@
 <h1>Dashboard</h1>
+<div>
+  <span [ngSwitch]="activeAccounts">
+    <p *ngSwitchCase="0">
+        No active accounts costing {{price}}kr
+    </p>
+    <p *ngSwitchCase="1">
+        1 active account costing {{price}}kr
+    </p>
+    <p *ngSwitchDefault>
+        {{activeAccounts}} active accounts costing {{price}}kr
+    </p>
+  </span>
+</div>
 
 <div class="input-group input-group-md">
     <div class="input-group-prepend">

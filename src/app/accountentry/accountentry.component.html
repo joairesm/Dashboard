@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [ngClass]="{'disabled': !accountInfo.active}" >
     <div class="card-body">
       <div class="card-text">
         <div class="row">
@@ -7,7 +7,7 @@
                 {{accountInfo.subscription.name}} <span class="info">{{accountInfo.subscription.price}}kr</span>
             </div>
             <div class="col-4">
-                <select [(ngModel)]="optionselected" 
+                <select [disabled]="!accountInfo.active" [(ngModel)]="optionselected" 
                         (ngModelChange)="onOptionsSelected($event)" 
                         class="custom-select custom-select-sm">
                     <option *ngFor="let sub of subscriptions" [value]="sub.name" >
