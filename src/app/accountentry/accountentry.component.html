@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-body">
+      <div class="card-text">
+        <div class="row">
+            <div class="col-3">{{accountInfo.number}}</div>
+            <div class="col-2">
+                {{accountInfo.subscription.name}} <span class="info">{{accountInfo.subscription.price}}kr</span>
+            </div>
+            <div class="col-4">
+                <select [(ngModel)]="optionSelected" (ngModelChange)="onOptionsSelected($event,sub)" class="custom-select custom-select-sm">
+                    <!--<option selected>Change subscription...</option>-->
+                    <option *ngFor="let sub of subscriptions">
+                        {{sub.name}} - {{sub.description}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <togglebutton-component
+                    [default-value]="accountInfo.active" 
+                    (valueChange)="onToggleChange($event)"></togglebutton-component>
+                    <span [ngSwitch]="accountInfo.active">
+                            <p *ngSwitchCase="true" class="info" >
+                                Active
+                            </p>
+                            <p *ngSwitchCase="false" class="info">
+                                Deactive
+                            </p>
+                            <p *ngSwitchDefault class="info">
+                                unknown state
+                            </p>
+                        </span>
+            
+                </div>
+        </div>
+
+
+      </div>
+
+    </div>
+</div>

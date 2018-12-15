@@ -1,0 +1,7 @@
+<div (click)="toggle()" [ngClass]="activate ? 'toggle-on' : 'toggle-off'" class="toggle">
+    <div class="content">
+        <div [ngClass]="activate ? 'visible' : 'collapsed'" class="text">{{toggleOnText}}</div>
+        <div [ngClass]="activate ? 'collapsed' : 'visible'" class="text">{{toggleOffText}}</div>
+        <div class="circle toggle-animate"></div>
+    </div>
+</div>
