@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { account } from '../Models/account';
 import { NgRedux } from 'ng2-redux';
 import { IAppState } from '../store';
-import { ACTIVATE, DEACTIVATE } from '../actions';
+import { ACTIVATE, DEACTIVATE, CHANGESUBSCRIPTION } from '../actions';
 import { subscription } from '../Models/subscription';
 import { subscriptions } from '../services/subscriptions';
 
@@ -11,20 +11,30 @@ import { subscriptions } from '../services/subscriptions';
     templateUrl: './accountentry.component.html',
     styleUrls: ['./accountentry.component.scss']
 })
-export class AccountEntryComponent{
+export class AccountEntryComponent implements OnInit{
 
     @Input('account') accountInfo: account;
 
     subscriptions: subscription[];
-    optionSelected: string;
+    optionselected: string;
+
+
+    ngOnInit(): void {
+        
+        this.optionselected = this.accountInfo.subscription.name
+        
+    }
 
     constructor(private redux: NgRedux<IAppState>){
         this.subscriptions = subscriptions
-        this.optionSelected = 'Large - 50GB data + 500m calls';
     }
 
     onOptionsSelected(event){
-        console.log(event + ' + ' + this.optionSelected); //option value will be sent as event
+        var sub = subscriptions.find(s => s.name == event);
+        this.redux.dispatch({ type: CHANGESUBSCRIPTION, 
+                            account: this.accountInfo, 
+                            subscription: sub});
+
     }
 
     onToggleChange(result:boolean){
@@ -33,10 +43,5 @@ export class AccountEntryComponent{
         }else{
             this.redux.dispatch( { type: DEACTIVATE, account: this.accountInfo } );
         }
-    }
-
-    onSelect(){
-        console.log( " - " );
-        
     }
 }

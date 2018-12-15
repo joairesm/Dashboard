@@ -7,9 +7,10 @@
                 {{accountInfo.subscription.name}} <span class="info">{{accountInfo.subscription.price}}kr</span>
             </div>
             <div class="col-4">
-                <select [(ngModel)]="optionSelected" (ngModelChange)="onOptionsSelected($event,sub)" class="custom-select custom-select-sm">
-                    <!--<option selected>Change subscription...</option>-->
-                    <option *ngFor="let sub of subscriptions">
+                <select [(ngModel)]="optionselected" 
+                        (ngModelChange)="onOptionsSelected($event)" 
+                        class="custom-select custom-select-sm">
+                    <option *ngFor="let sub of subscriptions" [value]="sub.name" >
                         {{sub.name}} - {{sub.description}}
                     </option>
                 </select>
