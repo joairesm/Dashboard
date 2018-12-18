@@ -19,9 +19,9 @@
                     [default-value]="accountInfo.active" 
                     (valueChange)="onToggleChange($event)"></togglebutton-component>
                     <span [ngSwitch]="accountInfo.active">
-                        <p *ngSwitchCase="true" class="info" i18n>Active</p>
-                        <p *ngSwitchCase="false" class="info" i18n>Deactive</p>
-                        <p *ngSwitchDefault class="info" i18n>unknown state</p>
+                        <p *ngSwitchCase="true" class="info state" i18n>Active</p>
+                        <p *ngSwitchCase="false" class="info state" i18n>Deactive</p>
+                        <p *ngSwitchDefault class="info state" i18n>unknown state</p>
                     </span>
             </div>
         </div>
