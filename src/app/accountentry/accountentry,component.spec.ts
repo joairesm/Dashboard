@@ -52,4 +52,5 @@ describe('AccountEntryComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('.state').textContent).toContain('Active');
   });
+
 });

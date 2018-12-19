@@ -4,15 +4,15 @@
     <h1 i18n>Dashboard</h1>
     <div>
       <span [ngSwitch]="activeAccounts">
-        <p *ngSwitchCase="0" i18n>No active accounts</p>
-        <p *ngSwitchCase="1" i18n>1 active account costing {{price}}kr</p>
-        <p *ngSwitchDefault i18n>{{activeAccounts}} active accounts costing {{price}}kr</p>
+        <p *ngSwitchCase="0" class="extra-info" i18n>No active accounts</p>
+        <p *ngSwitchCase="1" class="extra-info" i18n>1 active account costing {{price}}kr</p>
+        <p *ngSwitchDefault class="extra-info" i18n>{{activeAccounts}} active accounts costing {{price}}kr</p>
       </span>
     </div>
   </div>
 
   <div class="col menu-bar">
-    <a class="btn btn-outline-primary" target="_blank" href="https://github.com/joairesm/challenge">GihHub</a>
+    <a class="btn btn-outline-primary" id="bbb" target="_blank" href="https://github.com/joairesm/challenge">GihHub</a>
   </div>
 
 </div>
