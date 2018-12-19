@@ -2,10 +2,10 @@
     <div class="card-body">
       <div class="card-text">
         <div class="row">
-            <div class="col-3">{{accountInfo.number}}</div>
-            <div class="col-2 sub-name">{{accountInfo.subscription.name}}<span class="info"> {{accountInfo.subscription.price}}kr</span>
+            <div class="col-12 col-sm-12 col-md-3">{{accountInfo.number}}</div>
+            <div class="col-md-3 d-none d-md-block sub-name">{{accountInfo.subscription.name}}<span class="info"> {{accountInfo.subscription.price}}kr</span>
             </div>
-            <div class="col-4">
+            <div class="col-8 col-sm-9 col-md-4">
                 <select [disabled]="!accountInfo.active" [(ngModel)]="optionselected" 
                         (ngModelChange)="onOptionsSelected($event)" 
                         class="my-dropdown custom-select custom-select-sm">
@@ -14,7 +14,7 @@
                     </option>
                 </select>
             </div>
-            <div class="col-3">
+            <div class="col-4 col-sm-3 col-md-2">
                 <togglebutton-component
                     [default-value]="accountInfo.active" 
                     (valueChange)="onToggleChange($event)"></togglebutton-component>
