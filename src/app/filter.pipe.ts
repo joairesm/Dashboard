@@ -4,6 +4,9 @@ import { account } from './Models/account';
 const ACTIVE = 'active';
 const DEACTIVATE = 'deactive';
 
+/**
+ * This class is responsible of filtering the search results.
+ */
 @Pipe({name: 'filterpipe', pure: false})
 export class FilterPipe {
   transform(list: account[], searchText: string): account[] {

@@ -3,6 +3,9 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { AppModule } from '../app.module';
 import { By } from '@angular/platform-browser';
 
+/**
+ * unit-testing
+ */
 describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
@@ -15,19 +18,26 @@ describe('DashboardComponent', () => {
       ],
     }).compileComponents();
   }));
-
+/**
+ * testing if the creation of the component is successful
+ */
   it('should create the Component', () => {
       const fixture = TestBed.createComponent(DashboardComponent);
       const app = fixture.debugElement.componentInstance;
       expect(app).toBeTruthy();
   });
-
+/**
+ * test if the fake data is loaded correctly
+ */
   it(`fake data is loaded`, () => {
     const fixture = TestBed.createComponent(DashboardComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.accounts.length).toEqual(3);
   });
 
+/**
+ * test if the search input is binded correctly
+ */
   it('text the input value binding', () => {
     const fixture = TestBed.createComponent(DashboardComponent);
     fixture.detectChanges();
@@ -39,7 +49,9 @@ describe('DashboardComponent', () => {
     expect(fixture.componentInstance.searchText).toBe('someValue');
   });
 
-
+/**
+ * test if the cards binding work correctly
+ */
   it(`right number of cards are being generated`, () => {
 
     const NUMBEROFACCOUNTS = 5;

@@ -2,6 +2,10 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 
+/**
+ * unit-testing
+ * testing if the creation of the app is successful
+ */
 describe('AppComponent', () => {
 
   beforeEach(async(() => {

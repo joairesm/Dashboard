@@ -27,6 +27,10 @@ import { FilterPipe } from './filter.pipe';
   providers: [],
   bootstrap: [AppComponent]
 })
+
+/**
+ * Redux service is injected on the app main module constructor.
+ */
 export class AppModule {
   constructor (redux: NgRedux<IAppState>){
     redux.configureStore(rootReducer, INITIALSTATE)

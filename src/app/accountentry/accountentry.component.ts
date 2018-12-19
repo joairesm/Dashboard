@@ -11,6 +11,9 @@ import { subscriptions } from '../services/subscriptions';
     templateUrl: './accountentry.component.html',
     styleUrls: ['./accountentry.component.scss']
 })
+/**
+ * Class responsible for each account card
+ */
 export class AccountEntryComponent implements OnInit{
 
     @Input('account') accountInfo: account;
@@ -18,17 +21,18 @@ export class AccountEntryComponent implements OnInit{
     subscriptions: subscription[];
     optionselected: string;
 
-
     ngOnInit(): void {
-        
         this.optionselected = this.accountInfo.subscription.name
-        
     }
 
     constructor(private redux: NgRedux<IAppState>){
         this.subscriptions = subscriptions
-    }
-
+    }  
+    
+    /**
+     * event handler when a new option is selected
+     * @param event 
+     */
     onOptionsSelected(event){
         var sub = subscriptions.find(s => s.name == event);
         this.redux.dispatch({ type: CHANGESUBSCRIPTION, 
@@ -36,7 +40,10 @@ export class AccountEntryComponent implements OnInit{
                             subscription: sub});
 
     }
-
+    /**
+     * event handler for toggle button when commuted
+     * @param result current value of the toggle button
+     */
     onToggleChange(result:boolean){
         if(result){
             this.redux.dispatch( { type: ACTIVATE, account: this.accountInfo } );

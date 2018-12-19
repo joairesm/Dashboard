@@ -1,7 +1,9 @@
 import { AppPage } from './app.po';
-import { element, by, browser } from 'protractor';
-import { getRenderedText } from '@angular/core/src/render3';
+import { element, by } from 'protractor';
 
+/**
+ * e2e testing
+ */
 describe('workspace-project App', () => {
   let page: AppPage;
 
@@ -9,11 +11,16 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
+  /**
+   * test if the right title is on the page
+   */
   it('should display dashboard tittle', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('Dashboard');
   });
-
+/**
+ * test turning all the buttons off and get 0 costs
+ */
   it('toggle off all buttons', () => {
     page.navigateTo();
     element.all(by.css('.toggle-on')).then(function(items) {
